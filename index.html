@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mr. Maddy | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="preloader" id="preloader">
+    <div class="preloader__logo">M</div>
+    <div class="preloader__bar"></div>
+  </div>
+
+  <canvas id="bg-particles"></canvas>
+  <div class="grid-overlay"></div>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursor-trail"></div>
+
+  <header class="nav" id="nav">
+    <div class="nav__logo" id="logo">Mr.<span>Maddy</span></div>
+    <nav class="nav__links">
+      <a href="#hero" class="nav__link active">Home</a>
+      <a href="#about" class="nav__link">About</a>
+      <a href="#skills" class="nav__link">Skills</a>
+      <a href="#projects" class="nav__link">Projects</a>
+      <a href="#experience" class="nav__link">Experience</a>
+      <a href="#contact" class="nav__link">Contact</a>
+    </nav>
+    <div class="nav__actions">
+      <button id="themeToggle" aria-label="Toggle theme" class="icon-btn">
+        <span class="icon-moon"></span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="section hero">
+      <div class="hero__content" data-aos="fade-right">
+        <p class="eyebrow">MR.MADDY future ML Engineer</p>
+        <h1 class="glow">Hi, I'm <span>Mr. Maddy</span></h1>
+        <h2 class="typing"><span id="typed"></span></h2>
+        <p class="hero__text">I build intelligent systems, immersive experiences, and bold digital products that feel like they're from the near future.</p>
+        <div class="hero__cta">
+          <a class="btn primary" href="#projects">View Work</a>
+          <a class="btn ghost" href="#contact">Contact Me</a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat"><span class="number" data-count="4">0</span><p>Projects</p></div>
+          <div class="stat"><span class="number" data-count="5">0</span><p>AI Models</p></div>
+          <div class="stat"><span class="number" data-count="1">0</span><p>Hackathons</p></div>
+        </div>
+      </div>
+      <div class="hero__visual" data-aos="zoom-in">
+        <div class="profile-wrap">
+          <div class="orb"></div>
+          <img src="/assets/images/ myphoto.jpeg" alt="Mr. Maddy portrait" loading="lazy" />
+        </div>
+        <div class="floating-badges">
+          <div class="badge">Python</div>
+          <div class="badge">Frontend</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about" data-aos="fade-up">
+      <div class="glass">
+        <div class="about__header">
+          <h3>About Me</h3>
+          <p>Passionate AI/ML student building real-world projects, improving problem-solving skills, and aiming to create innovative, impactful technology solutions.</p>
+        </div>
+        <div class="about__grid">
+          <div class="about__bio">
+            <p>Currently exploring multi-modal models, real-time inference, and edge deployment. I enjoy pushing UI beyond templates, making every interaction feel alive.</p>
+            <div class="counters">
+              <div class="counter">
+                <span class="counter__number" data-count="0">0</span>
+                <p>Years Experience</p>
+              </div>
+              <div class="counter">
+                <span class="counter__number" data-count="5">0</span>
+                <p>Certifications</p>
+              </div>
+            </div>
+          </div>
+            <div class="timeline__item">
+              <div class="dot"></div>
+              <div class="content">
+                <p class="time">2024 – 2028</p>
+                <h4>Computer Science, B.Tech in GIETU </h4>
+                <p>Specialized in Artificial Intelligence and Machine Learning</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills" data-aos="fade-up">
+      <div class="section__heading">
+        <h3>Skills Radar</h3>
+        <p>Blending algorithms with aesthetics.</p>
+      </div>
+      <div class="skills__grid">
+        <div class="skill-card tilt">
+          <div class="skill-card__header">
+            <span>Python / ML</span>
+            <span class="pill">Core</span>
+          </div>
+          <div class="progress"><span data-value="92"></span></div>
+          <p>PyTorch, TensorFlow, Flask, Django.</p>
+        </div>
+        <div class="skill-card tilt">
+          <div class="skill-card__header">
+            <span>Frontend</span>
+            <span class="pill">UI</span>
+          </div>
+          <div class="progress"><span data-value="88"></span></div>
+          <p>HTML, CSS, JS.</p>
+        </div>
+        <div class="skill-card tilt">
+          <div class="skill-card__header">
+            <span>AI Product</span>
+            <span class="pill">UX</span>
+          </div>
+          <div class="progress"><span data-value="80"></span></div>
+          <p>Prompt design, Deploying.</p>
+        </div>
+      </div>
+      <div class="tech-icons" data-aos="zoom-in">
+        <span>Python</span><span>C</span><span>JAVA</span><span>DSA</span><span>TensorFlow</span><span>DBMS</span><span>OS</span><span>SQL</span>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects" data-aos="fade-up">
+      <div class="section__heading">
+        <h3>Featured Projects</h3>
+        <p>Here is my Projects that I have created</p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card tilt" data-category="ai">
+          <img src="/assets/images/ Hackathon_Project.png" alt="Neon project" loading="lazy" />
+          <div class="project__body">
+            <h4>DigiArch</h4>
+            <p>Team VECTORMIND in Hackathon created this responible project which help the university students to get there opprtunites, Notices etc erlier.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span><span>SQLite</span><span>Python Flask</span></div>
+            <div class="actions">
+              <a href="https://abinash-6370.github.io/Vector_mind/" class="btn tiny">Live</a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card tilt" data-category="ml">
+          <img src="/assets/images/ booking.png" alt="Vision project" loading="lazy" />
+          <div class="project__body">
+            <h4>Booking Management System for Room Booking (Laravel)</h4>
+            <p>A fullstack reponsible webite for room bookings using laravel.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span><span>PHP</span></div>
+            <div class="actions">
+            </div>
+          </div>
+        </article>
+        <article class="project-card tilt" data-category="web">
+          <img src="assets/images/project3.svg" alt="Dashboard" loading="lazy" />
+          <div class="project__body">
+            <h4>Smart Clinic Booking</h4>
+            <p>A responsive web application for managing clinic appointments with real-time availability updates.</p>
+            <div class="tags"><span>Flask</span><span>SQLite</span><span>HTML, CSS & JS</span></div>
+            <div class="actions">
+              <a href="#" class="btn tiny">Live</a>
+              <a href="#" class="btn tiny ghost">GitHub</a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card tilt" data-category="ai">
+          <img src="assets/images/project4.svg" alt="Chatbot" loading="lazy" />
+          <div class="project__body">
+            <h4>Dynamic Hospital Queue Optimization</h4>
+            <p>An AI-driven solution to optimize hospital queue management and reduce patient wait times.</p>
+            <div class="tags"><span>HTML, CSS & JS</span><span>Flask</span><span>SQLite</span></div>
+            <div class="actions">
+              <a href="#" class="btn tiny">Live</a>
+              <a href="#" class="btn tiny ghost">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section experience" data-aos="fade-up">
+      <div class="section__heading">
+        <h3>Education</h3>
+        <p>My educational background.</p>
+      </div>
+      <div class="exp-timeline">
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-card glass tilt">
+            <p class="time">2022 School Passout</p>
+            <h4>Bandhagaon Nodal High School, Bandhagaon, Bhadrak, Odisha</h4>
+            <p>I havecompleted my 10th grade education from this school with 80% marks.</p>
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-card glass tilt">
+            <p class="time">2022 - 2024 Intermediate Passout</p>
+            <h4>Jambeswar Higher Secondary School, Garasang, Balasore, Odisha</h4>
+            <p>I have completed my intermediate education from this college with 75% marks.</p>
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-card glass tilt">
+            <p class="time">2024 - 2028 current</p>
+            <h4>GIET University Gunupur, Rayagada, Odisha</h4>
+            <p>Currently pursuing B.Tech in Computer Science in this university with 7.78 CGPA.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="lab" class="section lab" data-aos="fade-up">
+      <div class="section__heading">
+        <h3>AI Playground</h3>
+        <p>Chat-like mock UI; front-end only.</p>
+      </div>
+      <div class="chat glass">
+        <div class="chat__header">
+          <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+          <span>maddy.ai sandbox</span>
+        </div>
+        <div class="chat__body" id="chatBody">
+          <div class="bubble ai">Hello, I'm a synthetic assistant tuned for fast prototyping. Ask me about models or ideas!</div>
+          <div class="bubble user">Show me a neon UI palette.</div>
+          <div class="bubble ai">Try cyan #3CF and magenta #C43 with deep black #050510.</div>
+        </div>
+        <div class="chat__input">
+          <input type="text" id="chatInput" placeholder="Type a prompt..." />
+          <button id="chatSend" class="btn tiny">Send</button>
+        </div>
+      </div>
+    </section> -->
+
+    <section id="contact" class="section contact" data-aos="fade-up">
+      <div class="section__heading">
+        <h3>Contact</h3>
+        <p>Let's build something audacious.</p>
+      </div>
+      <div class="contact__grid">
+        <form class="contact__form glass" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn primary full">Send Message</button>
+          <p class="form-status" id="formStatus"></p>
+        </form>
+        <div class="contact__info glass">
+          <div class="info">
+            <h4>Based in</h4>
+            <p>India (remote-friendly)</p>
+          </div>
+          <div class="info">
+            <h4>Email</h4>
+            <p>jyoti.mhkd.977@gmail.com</p>
+          </div>
+          <div class="info socials">
+            <h4>Socials</h4>
+            <div class="social-links">
+              <a href="https://github.com/jyotimhkd977-lang">GitHub</a>
+              <a href="https://www.linkedin.com/in/jyotiranjan-mohakud-021730367/">LinkedIn</a>
+              <a href="">Instagram</a>
+            </div>
+          </div>
+          <button class="btn ghost" id="playSound">Play click FX</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Mr. Maddy — Crafted with code & curiosity.</p>
+    <a href="#hero" class="back-to-top">Back to top ↑</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
